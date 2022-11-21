@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { scoreAction } from '../redux/actions';
 import { pegaJogadorStorage } from '../services/gameStorage';
+import './Ranking.css';
 
 class Ranking extends Component {
   state = {
@@ -28,11 +29,14 @@ class Ranking extends Component {
       const { email, name, score } = jogador;
       const gravatarEmail = md5(email).toString();
       return (
-        <li key={ index }>
+
+        <li className="lista-ranking" key={ index }>
+
           <img src={ `https://www.gravatar.com/avatar/${gravatarEmail}` } alt={ name } />
           <p data-testid={ `player-name-${index}` }>{name}</p>
           <p data-testid={ `player-score-${index}` }>{score}</p>
         </li>
+
       );
     });
     return lista;
@@ -40,17 +44,21 @@ class Ranking extends Component {
 
   render() {
     return (
-      <div>
+      <div className="box-ranking">
         <h1
+          className="title-ranking"
           data-testid="ranking-title"
         >
-          Ranking
+          RANKING
 
         </h1>
+
         <ol>
           { this.listaRanking() }
         </ol>
+
         <button
+          className="bt-inicio"
           onClick={ this.btnInicio }
           aria-label="ranking"
           type="button"

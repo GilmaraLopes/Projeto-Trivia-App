@@ -1,0 +1,45 @@
+.box-ranking {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 4px 13px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+
+  /* height: 488px; */
+  justify-content: center;
+  margin-left: 700px;
+  margin-top: 50px;
+  width: 489px;
+}
+
+.title-ranking {
+  color: #3c1b7a;
+  font-family: Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 150%;
+  text-align: center;
+}
+
+.bt-inicio {
+  background: #2fc18c;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 45px;
+  left: 447px;
+
+  /* position: absolute; */
+  top: 550px;
+  width: 386px;
+}
+
+/* .lista-ranking {
+  align-items: center;
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+
+} */

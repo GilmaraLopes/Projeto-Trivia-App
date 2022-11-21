@@ -1,0 +1,70 @@
+header {
+  align-items: center;
+  background: white;
+  display: flex;
+  font-family: Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 113px;
+  justify-content: space-evenly;
+  left: 0;
+  line-height: 150%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.img-gravatar {
+  border-radius: 18.137px;
+  height: 37px;
+  width: 37px;
+}
+
+.logo-game {
+  height: 222px;
+  left: 221px;
+
+  /* position: absolute; */
+  padding-top: 150px;
+  top: 19px;
+  width: 197.09px;
+}
+
+.player {
+  align-items: center;
+  display: flex;
+  height: 24px;
+}
+
+.play-name {
+  align-items: center;
+  display: flex;
+  height: 24px;
+  left: 729px;
+  line-height: 150%;
+  top: 20px;
+
+  /* position: absolute; */
+  width: 133px;
+
+}
+
+.estrela {
+  align-items: center;
+  color: black;
+
+  /* identical to box height, or 24px */
+  display: flex;
+
+  /* left: 943px;
+top: 49px; */
+  font-family: Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 24px;
+  letter-spacing: 0.12em;
+  line-height: 150%;
+  width: 101px;
+}

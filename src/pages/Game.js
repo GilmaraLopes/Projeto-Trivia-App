@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import getTrivia from '../services/fetchTrivia';
 import { rightAnswer, scoreAction } from '../redux/actions';
 import { pegaJogadorStorage, salvaJogadorStorage } from '../services/gameStorage';
+import './Game.css';
 
 class Game extends Component {
   constructor() {
@@ -153,19 +154,26 @@ class Game extends Component {
         {questions.map((e, i) => {
           if (i === indexQuestion) {
             return (
-              <div>
-                <p>
-                  Timer
-                  { timer }
-                </p>
+              <div className="box-quiz">
+
                 <div key={ i }>
                   <div className="perguntas">
-                    <p data-testid="question-text">{ e.question }</p>
-                    <p data-testid="question-category">{ e.category }</p>
+                    <p
+                      // style={ color }
+                      data-testid="question-category"
+                    >
+                      { e.category }
+
+                    </p>
+                    <p className="question" data-testid="question-text">{ e.question }</p>
+                    <p className="timer">
+                      { timer }
+                    </p>
                   </div>
                   <div className="respostas" data-testid="answer-options">
                     {(singleAnswer).map((el, index) => (
                       <button
+                        className="bt-resposta"
                         onClick={ this.clickAnswer }
                         disabled={ timer <= 0 }
                         type="button"
@@ -178,6 +186,7 @@ class Game extends Component {
                           ? 'correct-answer' : `wrong-answer-${index}` }
                         style={ {
                           border: color && (this.mudarCor(el, e)),
+
                         } }
                       >
                         { el }
@@ -195,6 +204,7 @@ class Game extends Component {
         {
           color && (
             <button
+              className="bt-next"
               type="button"
               data-testid="btn-next"
               onClick={ this.clickNext }

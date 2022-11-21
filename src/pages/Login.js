@@ -3,6 +3,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import getToken from '../services/fetchToken';
 import { requestEmail } from '../redux/actions';
+import './Login.css';
+import logo from '../imagens/logo.png';
 
 const INITIAL_STATE = {
   name: '',
@@ -53,48 +55,53 @@ class Login extends React.Component {
   render() {
     const { name, email, btnDisable } = this.state;
     return (
-      <form>
-        <label htmlFor="name">
-          Nome
-          <input
-            type="text"
-            data-testid="input-player-name"
-            id="name"
-            name="name"
-            value={ name }
-            placeholder="Insira seu nome"
-            onChange={ this.onInputChange }
-          />
-        </label>
-        <label htmlFor="email">
-          E-mail
-          <input
-            type="email"
-            data-testid="input-gravatar-email"
-            id="email"
-            name="email"
-            value={ email }
-            placeholder="email"
-            onChange={ this.onInputChange }
-          />
-        </label>
-        <button
-          data-testid="btn-play"
-          type="button"
-          disabled={ btnDisable }
-          onClick={ this.startGame }
-        >
-          Play
-        </button>
-        <button
-          data-testid="btn-settings"
-          type="button"
-          onClick={ this.btnSettings }
-        >
-          Configurações
-        </button>
+      <div className="box-login">
+        <img className="logo" src={ logo } alt="logo" />
+        <form className="form">
+          <label htmlFor="name">
+            <input
+              className="input-name"
+              type="text"
+              data-testid="input-player-name"
+              id="name"
+              name="name"
+              value={ name }
+              placeholder="Qual o seu nome?"
+              onChange={ this.onInputChange }
+            />
+          </label>
+          <label htmlFor="email">
 
-      </form>
+            <input
+              className="input-email"
+              type="email"
+              data-testid="input-gravatar-email"
+              id="email"
+              name="email"
+              value={ email }
+              placeholder="Qual o seu email?"
+              onChange={ this.onInputChange }
+            />
+          </label>
+          <button
+            className="bt-play"
+            data-testid="btn-play"
+            type="button"
+            disabled={ btnDisable }
+            onClick={ this.startGame }
+          >
+            PLAY
+          </button>
+          <button
+            className="bt-config"
+            data-testid="btn-settings"
+            type="button"
+            onClick={ this.btnSettings }
+          >
+            CONFIGURAÇÕES
+          </button>
+        </form>
+      </div>
     );
   }
 }

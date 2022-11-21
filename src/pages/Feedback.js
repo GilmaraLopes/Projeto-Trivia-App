@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Header from '../components/Header';
+// import Header from '../components/Header';
 import { scoreAction } from '../redux/actions';
+import './Feedback.css';
+import logofeed from '../imagens/logofeed.png';
 
 class Feedback extends Component {
   playAgain = () => {
@@ -23,27 +25,52 @@ class Feedback extends Component {
     const NUMBER = 3;
     return (
       <>
-        <Header scoreType={ score } />
-        {(assertions >= NUMBER)
-          ? <p data-testid="feedback-text">Well Done!</p>
-          : <p data-testid="feedback-text">Could be better...</p>}
-        <p data-testid="feedback-total-question">{assertions}</p>
-        <p data-testid="feedback-total-score">{score}</p>
-        <button
-          type="button"
-          data-testid="btn-play-again"
-          onClick={ this.playAgain }
-        >
-          Play Again
-        </button>
-        <button
-          type="button"
-          data-testid="btn-ranking"
-          onClick={ this.goToRanking }
-        >
-          Ranking
+        {/* <Header scoreType={ score } /> */}
+        <div className="box-feed">
+          <img className="logofeed" src={ logofeed } alt="img" />
+          <div className="feedback-box">
+            {(assertions >= NUMBER)
+              ? <p className="good" data-testid="feedback-text">Mandou bem!</p>
+              : <p className="bad" data-testid="feedback-text">Podia ser melhor... </p>}
+            <p
+              data-testid="feedback-total-question"
+            >
 
-        </button>
+              Você acertou
+              {' '}
+              {assertions}
+              {' '}
+              questões!
+
+            </p>
+            <p data-testid="feedback-total-score">
+              Um total de
+              {' '}
+              {score}
+              {' '}
+              pontos
+            </p>
+          </div>
+          <div className="bts">
+            <button
+              className="novamente"
+              type="button"
+              data-testid="btn-play-again"
+              onClick={ this.playAgain }
+            >
+              Jogar Novamente
+            </button>
+            <button
+              className="ranking"
+              type="button"
+              data-testid="btn-ranking"
+              onClick={ this.goToRanking }
+            >
+              Ver Ranking
+
+            </button>
+          </div>
+        </div>
       </>
     );
   }

@@ -1,0 +1,120 @@
+.ranking {
+  background: #00d5e2;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 45px;
+  left: 745px;
+  letter-spacing: 0.12em;
+  line-height: 150%;
+  position: absolute;
+  text-align: center;
+  top: 680px;
+  width: 214px;
+}
+
+.novamente {
+  background: #00d5e2;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 45px;
+  left: 963px;
+  letter-spacing: 0.12em;
+  line-height: 150%;
+  position: absolute;
+  text-align: center;
+  top: 680px;
+  width: 212.5px;
+}
+
+.feedback-box {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 4px 13px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 278px;
+  left: 421px;
+
+  /* position: absolute; */
+  top: 329px;
+  width: 439px;
+}
+
+.logofeed {
+  height: 153.79px;
+  left: 571.84px;
+
+  /* position: absolute; */
+  top: 28.21px;
+  width: 136.54px;
+}
+
+/* .foto {
+  background: white;
+  border: 4px solid #2fc18c;
+  border-radius: 104.412px;
+  box-sizing: border-box;
+  filter: drop-shadow(0 0 9px #2fc18c);
+  height: 213px;
+  left: 534px;
+
+  /* position: absolute; */
+
+/* top: 200px;
+  width: 213px;
+}  */
+
+.box-feed {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+}
+
+.good {
+  align-items: center;
+  color: #2fc18c;
+  display: flex;
+  font-family: Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bad {
+  align-items: center;
+  color: #ea5d5d;
+  display: flex;
+  font-family: Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bts {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: -35px;
+  position: absolute;
+  top: -15px;
+
+}
