@@ -52,6 +52,11 @@ class Game extends Component {
           timer: prev.timer > 0 ? prev.timer - 1 : 0,
         }));
       }
+      if (timer === 0) {
+        this.setState({
+          color: true,
+        });
+      }
     }, seconds);
   };
 
